@@ -1,7 +1,7 @@
 from django.urls import path
 
-from properties.views import PropertyListView
+from properties.views import property_list
 
 urls = [
-    path("properties/", PropertyListView.as_view(), name="property-list"),
+    path("properties/", property_list.as_view(), name="property-list"),
 ]
