@@ -10,4 +10,4 @@ from django.views.decorators.cache import cache_page
 def property_list(request):
     properties = Property.objects.all()
     serializer = PropertySerializer(properties, many=True)
-    return JsonResponse(serializer.data, safe=False)
+    return JsonResponse({"properties": serializer.data}, safe=False)
